@@ -1,0 +1,19 @@
+#form {
+    width: 500px;
+    color: #8fb2ca;
+    height: 400px;
+    padding: 20px;
+    border: 3px solid #19d4fc;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 500px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #131111;
+    margin: 10px 700px 10px 550px;
+    padding-top: 50px;
+    width: 100%;
+}

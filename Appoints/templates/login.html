@@ -1,0 +1,39 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #6b91ac;">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="link" href="#">World</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </div>
+        </div>
+    </nav>
+    <h2>Login here!</h2>
+        {% block content %}
+        <form id="form" method="POST">
+            {% csrf_token %} <br>
+            {{ form | crispy}} <br>
+            <input type="submit" value="Login" class="btn btn-info btn-primary btn-block">
+        </form>
+        {% endblock %}
+    
+</body>
+</html>
